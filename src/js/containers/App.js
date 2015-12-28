@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from './components/Header';
-import MainSection from './components/MainSection';
-import * as TodoActions from './actions/list';
+
+// import Header from '../components/Header';
+// import MainSection from '../components/MainSection';
+import * as TodoActions from '../actions/list';
 
 class App extends Component {
     render() {
@@ -11,8 +13,7 @@ class App extends Component {
         
         return (
             <div>
-                <Header actions={ actions } />
-                <MainSection list={ list } actions={ actions } />
+               444444
             </div>
         )
     }
@@ -20,10 +21,10 @@ class App extends Component {
 
 export default App;
 
-// App.propTypes = {
-//     list: PropTypes.array.isRequired,
-//     actions: PropTypes.object.isRequired
-// }
+App.propTypes = {
+    list: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired
+}
 
 function mapStateToProps(state) {
     return {
