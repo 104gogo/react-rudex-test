@@ -11,7 +11,7 @@ class MainSection extends React.Component {
 
 		return (
 			<ul>
-				{this.renderList(list)}
+				{ this.renderList(list) }
 			</ul>
 		)
 	}
