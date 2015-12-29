@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-// import Header from '../components/Header';
-// import MainSection from '../components/MainSection';
+import Header from '../components/Header';
+import MainSection from '../components/MainSection';
 import * as TodoActions from '../actions/list';
 
 class App extends Component {
@@ -13,7 +13,8 @@ class App extends Component {
         
         return (
             <div>
-               444444
+               <Header actions={actions} />
+               <MainSection list={list} actions={actions} />
             </div>
         )
     }
