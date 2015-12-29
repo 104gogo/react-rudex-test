@@ -2,11 +2,12 @@ import React from 'react';
 import { Route , IndexRoute} from "react-router";
 import App from "../containers/App";
 
-// import HomePage from "./components/Home";
+import Login from "../containers/Login";
 // import TopicPage from "./containers/TopicPage";
 
 
 export default (
-  <Route name="app" component={App} path="/">
-  </Route>
+  	<Route path="/" component={Login}>
+  		
+  	</Route>
 );

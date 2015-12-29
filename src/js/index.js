@@ -13,7 +13,7 @@ const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);
 
 //引入样式
-//import "../../public/css/index.css";
+import "../css/index.css";
 
 //挂载点
 const mountId = document.getElementById('root');
