@@ -8,6 +8,23 @@ import Button from '../components/common/Button';
 import * as LoginActions from '../actions/login';
 
 class Login extends Component {
+	constructor(props, context) {
+	    super(props, context)
+
+	    this.state = {
+	      	username: this.props.login.username || '',
+	      	password: this.props.login.password || ''
+	    }
+  	}
+
+	handleUsernameChange(e) {
+		this.setState({username: e.target.value});
+	}
+
+	handlePasswordChange(e) {
+		this.setState({password: e.target.value});
+	}
+
 	render() {
 		const { login, actions } = this.props;
 
@@ -21,11 +38,19 @@ class Login extends Component {
 						<div>
 							<div className="line">
 								<label>帐号</label>
-								<input id="js_useremail" maxlength="2" data-validate="yes,帐号" type="text" className="input" />
+								<input ref="username"
+									type="text"
+									className="input" 
+									value={this.state.username} 
+									onChange={this.handleUsernameChange.bind(this)} />
 							</div>
 							<div className="line">
 								<label>密码</label>
-								<input id="js_password" type="password" maxlength="64" data-validate="yes,密码" className="input" />
+								<input ref="password" 
+									type="password" 
+									className="input" 
+									value={this.state.password} 
+									onChange={this.handlePasswordChange.bind(this)} />
 							</div>
 						</div>
 						
@@ -43,7 +68,7 @@ export default Login;
 
 function mapStateToProps(state) {
     return {
-        list: state.list
+        login: state.login
     }
 }
 
