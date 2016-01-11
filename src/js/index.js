@@ -1,7 +1,7 @@
 import 'babel-core/polyfill';
-import React                from 'react';
-import { render }           from 'react-dom';
-import { Router }           from 'react-router';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { Provider } from 'react-redux';
 import { ReduxRouter } from 'redux-router';
@@ -18,7 +18,6 @@ import "../css/index.css";
 //挂载点
 const mountId = document.getElementById('root');
 //渲染
-console.log(mountId);
 render(
     <Provider store={store} >
         <Router children={routes} history={history} />

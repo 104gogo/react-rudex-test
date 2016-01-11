@@ -18,11 +18,19 @@ class Login extends Component {
   	}
 
 	handleUsernameChange(e) {
-		this.setState({username: e.target.value});
+		var username = e.target.value.trim();
+
+		this.setState({username: username});
+
+		this.props.actions.userNameChange(username);
 	}
 
 	handlePasswordChange(e) {
-		this.setState({password: e.target.value});
+		var password = e.target.value.trim();
+
+		this.setState({password: password});
+
+		this.props.actions.passWordChange(username);
 	}
 
 	render() {
