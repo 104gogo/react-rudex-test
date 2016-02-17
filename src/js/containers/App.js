@@ -1,41 +1,36 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../components/index/Header';
+import * as AppActions from '../actions/app';
 // import Menu from '../components/index/Menu';
 // import MainSection from '../components/index/MainSection';
 
 class App extends Component {
     render() {
-        
+        const { header, menu } = this.props;
+console.log(header)
         return (
             <div>
-                <Header />
+                <Header header={ header } />
             </div>
         )
     }
-}  
+}
 
-export default App;
+function mapStateToProps(state) {
+    const { header, menu } = state.app.toJS();
 
-// App.propTypes = {
-//     list: PropTypes.array.isRequired,
-//     actions: PropTypes.object.isRequired
-// }
+    return {
+        header,
+        menu
+    }
+}
 
-// function mapStateToProps(state) {
-//     return {
-//         list: state.list
-//     }
-// }
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(AppActions, dispatch)
+    }
+}
 
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         actions: bindActionCreators(TodoActions, dispatch)
-//     }
-// }
-
-// export default connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-// )(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);
