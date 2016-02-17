@@ -1,26 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
 import Button from '../components/common/Button';
-
 import * as LoginActions from '../actions/login';
 
 class Login extends Component {
 	constructor(props, context) {
-	    super(props, context)
-
-	    this.state = {
-	      	username: this.props.login.username || '',
-	      	password: this.props.login.password || ''
-	    }
+	    super(props, context);
   	}
 
 	handleUsernameChange(e) {
 		var username = e.target.value.trim();
-
-		this.setState({username: username});
 
 		this.props.actions.userNameChange(username);
 	}
@@ -28,9 +18,7 @@ class Login extends Component {
 	handlePasswordChange(e) {
 		var password = e.target.value.trim();
 
-		this.setState({password: password});
-
-		this.props.actions.passWordChange(username);
+		this.props.actions.passWordChange(password);
 	}
 
 	render() {
@@ -49,21 +37,21 @@ class Login extends Component {
 								<input ref="username"
 									type="text"
 									className="input" 
-									value={this.state.username} 
-									onChange={this.handleUsernameChange.bind(this)} />
+									value={ this.props.login.username } 
+									onChange={ this.handleUsernameChange.bind(this) } />
 							</div>
 							<div className="line">
 								<label>密码</label>
 								<input ref="password" 
 									type="password" 
 									className="input" 
-									value={this.state.password} 
-									onChange={this.handlePasswordChange.bind(this)} />
+									value={ this.props.login.password } 
+									onChange={ this.handlePasswordChange.bind(this) } />
 							</div>
 						</div>
 						
 						<div className="line">
-							<Button actions={actions} />
+							<Button actions={ actions } />
 						</div>
 					</div>
 				</div>
@@ -71,8 +59,6 @@ class Login extends Component {
 		)
 	}
 }
-
-export default Login;
 
 function mapStateToProps(state) {
     return {
@@ -86,7 +72,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
