@@ -1,10 +1,7 @@
 import { LOGIN, CHANGE_USERNAME, CHANGE_PASSWORD } from '../actions/login';
 import {　Map　} from 'immutable';
 
-const initialState = Map({
-    username: '',
-    password: ''
-});
+const initialState = Map();
 
 export default function login(state = initialState, action) {
   	 switch (action.type) {

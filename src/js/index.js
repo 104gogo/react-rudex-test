@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 import { Router, Route } from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-
 import App from './containers/App';
 import Login from './containers/Login';
 

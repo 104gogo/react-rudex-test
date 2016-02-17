@@ -51,7 +51,7 @@ class Login extends Component {
 						</div>
 						
 						<div className="line">
-							<Button actions={ actions } />
+							<Button action={ actions.login } name={ '登录' } />
 						</div>
 					</div>
 				</div>

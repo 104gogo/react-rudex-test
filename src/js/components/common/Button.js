@@ -3,12 +3,12 @@ import React, { Component, PropTypes } from 'react';
 class Button extends Component {
 
 	handleClick(e) {
-		this.props.actions.login();
+		this.props.action();
 	}
 
 	render() {
 		return (
-			<button onClick={this.handleClick.bind(this)}>登录</button>
+			<button onClick={ this.handleClick.bind(this) }>{ this.props.name }</button>
 		)
 	}
 }

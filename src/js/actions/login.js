@@ -6,7 +6,7 @@ export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
 
 export function login() {
     return (dispatch, getState) => {
-    	const { username, password } = getState().login;
+    	const { username, password } = getState().login.toJS();
 
 		return fetch(`http://192.168.1.51:8671/login/${ username }/post`, {
 		  	method: 'post',
