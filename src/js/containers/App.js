@@ -1,12 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
 import * as TodoActions from '../actions/list';
-
-import Header from '../components/Header';
-import MainSection from '../components/MainSection';
+import Header from '../components/index/Header';
+// import Menu from '../components/index/Menu';
+// import MainSection from '../components/index/MainSection';
 
 class App extends Component {
     render() {
@@ -14,8 +12,9 @@ class App extends Component {
         
         return (
             <div>
-               <Header actions={actions} />
-               <MainSection list={list} actions={actions} />
+               <Header />
+               // <Menu />
+               // <MainSection />
             </div>
         )
     }
@@ -23,24 +22,24 @@ class App extends Component {
 
 export default App;
 
-App.propTypes = {
-    list: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
-}
+// App.propTypes = {
+//     list: PropTypes.array.isRequired,
+//     actions: PropTypes.object.isRequired
+// }
 
-function mapStateToProps(state) {
-    return {
-        list: state.list
-    }
-}
+// function mapStateToProps(state) {
+//     return {
+//         list: state.list
+//     }
+// }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(TodoActions, dispatch)
-    }
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         actions: bindActionCreators(TodoActions, dispatch)
+//     }
+// }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App)
+// export default connect(
+//     mapStateToProps,
+//     mapDispatchToProps
+// )(App)

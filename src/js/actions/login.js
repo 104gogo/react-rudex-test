@@ -15,7 +15,7 @@ export function login() {
 		})
 		.then(res => res.json())
 		.then(json => {
-			console.log(json)
+			location.hash = '#index';
 		});
 	};
 }

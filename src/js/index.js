@@ -1,11 +1,11 @@
 import 'babel-core/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route } from 'react-router';
+import { Router } from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-import App from './containers/App';
-import Login from './containers/Login';
+import routes from './routes';
+
 
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);
@@ -19,10 +19,7 @@ const mountId = document.getElementById('root');
 render((
 	<Provider store={ store } >
 	  	<Router>
-	  		<Route path="/">
-		    	<Route path="login" component={ Login } />
-		      	<Route path="app" component={ App } />
-		    </Route>
+	  		{ routes }
 	  	</Router>
 	</Provider>
 ), mountId)
