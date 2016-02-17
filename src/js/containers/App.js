@@ -1,20 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as TodoActions from '../actions/list';
 import Header from '../components/index/Header';
 // import Menu from '../components/index/Menu';
 // import MainSection from '../components/index/MainSection';
 
 class App extends Component {
     render() {
-        const { list, actions } = this.props;
         
         return (
             <div>
-               <Header />
-               // <Menu />
-               // <MainSection />
+                <Header />
             </div>
         )
     }

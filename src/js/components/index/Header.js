@@ -5,3 +5,5 @@ class Header extends Component {
 		return <div>123</div>
 	}
 }
+
+export default Header;
