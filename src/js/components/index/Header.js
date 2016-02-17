@@ -2,7 +2,25 @@ import React, { Component } from 'react';
 
 class Header extends Component {
 	render() {
-		return <div>123</div>
+		return <div className="top-common">
+			<div className="header">
+				<h1 className="fl">
+					<a href="#index"><span className="logo"></span></a>
+					<p className="fr">运力科技研发管理系统</p>
+				</h1>
+				<div className="fr user">
+					<span className="userName js_userName"></span>
+				</div>
+				<div className="fr user js_userName_box" >
+					<ul className="nameBox js_nameBox_list">
+						<li><span className="userName js_userName"></span></li>
+						<li className="js_update_password">修改密码</li>
+						<li className="js_update_user">修改资料</li> 
+						<li className="js_logout">退&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出</li> 
+					</ul>   
+				</div>
+			</div>
+		</div>
 	}
 }
 
