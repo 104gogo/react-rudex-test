@@ -8,7 +8,7 @@ export default (
 	<Route path="/">
 		<Route path="login" component={ Login } />
 	  	<Route path="app" component={ App }>
-
+	  		<Route path="index" component= { Index } />
 	  	</Route>
 	</Route>
 )

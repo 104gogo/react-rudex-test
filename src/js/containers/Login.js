@@ -37,7 +37,7 @@ class Login extends Component {
 								<input ref="username"
 									type="text"
 									className="input" 
-									value={ this.props.login.username } 
+									value={ login.username } 
 									onChange={ this.handleUsernameChange.bind(this) } />
 							</div>
 							<div className="line">
@@ -45,7 +45,7 @@ class Login extends Component {
 								<input ref="password" 
 									type="password" 
 									className="input" 
-									value={ this.props.login.password } 
+									value={ login.password } 
 									onChange={ this.handlePasswordChange.bind(this) } />
 							</div>
 						</div>
@@ -62,7 +62,7 @@ class Login extends Component {
 
 function mapStateToProps(state) {
     return {
-        login: state.login
+        login: state.login.toJS()
     }
 }
 
