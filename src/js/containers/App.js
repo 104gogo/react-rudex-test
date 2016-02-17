@@ -8,11 +8,11 @@ import * as AppActions from '../actions/app';
 
 class App extends Component {
     render() {
-        const { header, menu } = this.props;
-console.log(header)
+        const { header, menu, actions } = this.props;
+
         return (
             <div>
-                <Header header={ header } />
+                <Header header={ header } action={ actions.clickUserName } />
             </div>
         )
     }

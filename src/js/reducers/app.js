@@ -15,7 +15,7 @@ export default function(state = initialState, action) {
 		case CLICK_MENU: 
 			return;
 		case CLICK_USERNAME: 
-			return ;
+			return state.setIn(['header', 'isClick'], !action.op);
 	}
 
 	return state;
