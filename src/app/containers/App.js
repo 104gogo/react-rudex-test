@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from '../components/index/Header';
 import * as AppActions from '../actions/app';
-// import Menu from '../components/index/Menu';
+import Header from '../components/index/Header';
+import Menu from '../components/index/Menu';
 // import MainSection from '../components/index/MainSection';
 
 class App extends Component {
@@ -13,6 +13,7 @@ class App extends Component {
         return (
             <div>
                 <Header header={ header } action={ actions.clickUserName } />
+                <Menu />
             </div>
         )
     }
