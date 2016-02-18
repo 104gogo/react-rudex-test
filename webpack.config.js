@@ -29,7 +29,7 @@ module.exports = {
 	  		include: __dirname
 		}]
   	}
-}
+} 
 
 
 // When inside Redux repo, prefer src to compiled version.
