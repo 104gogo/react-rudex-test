@@ -1,3 +1,3 @@
 # react-rudex-test
 	npm install
-	localhost:3000
+	localhost:8000
