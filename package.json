@@ -26,6 +26,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.3.13",
     "history": "^2.0.0",
+    "raw-loader": "^0.5.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
@@ -33,6 +34,7 @@
     "redux": "^3.3.1",
     "redux-logger": "^2.5.2",
     "redux-thunk": "^1.0.3",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.7.1"

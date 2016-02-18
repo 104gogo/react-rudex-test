@@ -7,7 +7,7 @@ import configureStore from '../app/store/configureStore';
 import routes from '../app/routes';
 
 //引入样式
-// import '../../public/css/index.css';
+import '../../public/css/index.css';
 
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);

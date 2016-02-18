@@ -1,3 +1,5 @@
+import path from 'path';
+
 export default {
  	module: {
     	loaders: [
@@ -5,6 +7,11 @@ export default {
 		      	test: /\.js$/,
 		      	loaders: [ 'babel' ],
 		      	exclude: /node_modules/
+		    },
+		    {
+		      	test: /\.css?$/,
+		      	loaders: [ 'style', 'raw' ],
+		      	include: path.join(__dirname, '..',  'public')
 		    }
 		]
   	},
