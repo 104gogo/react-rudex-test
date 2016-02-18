@@ -13,6 +13,11 @@ export default {
 		      	loaders: [ 'style', 'raw' ],
 		      	include: path.join(__dirname, '..',  'public')
 		    }
+		    // {
+		    //   	test: /.*\.(png|gif|svg|jpe?g)$/,
+		    //   	loader: 'file?name=../../images/[hash:8].[name].[ext]',
+		    //   	include: path.join(__dirname, "..",  "public")
+		    // }
 		]
   	},
 	resolve: {
