@@ -14,6 +14,7 @@ class App extends Component {
             <div>
                 <Header header={ header } action={ actions.clickUserName } />
                 <Menu />
+                { this.props.children }
             </div>
         )
     }
