@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { ProductTable } from '../components/common/Table';
 
 class Index extends Component {
     render() {
@@ -15,17 +16,13 @@ class Index extends Component {
 								<button id="js_searchBtn" className="green-btn search-btn">查询</button>
 								<a href="javascript:;" id="js_about_me" className="about_me">我负责的</a>
 							</div>
-							
-							<a href="javascript:;" className="js_toAddProduct smallAddBtn" className="fr">添加产品</a>
-							<a href="javascript:;" className="js_toAddVersion smallAddBtn" className="fr">添加版本</a>
-							<a href="javascript:;" className="js_toAddApi smallAddBtn" className="fr">添加API</a>
-							
+							<a href="javascript:;" className="js_toAddProduct smallAddBtn fr">添加产品</a>
+							<a href="javascript:;" className="js_toAddVersion smallAddBtn fr">添加版本</a>
+							<a href="javascript:;" className="js_toAddApi smallAddBtn fr">添加API</a>
 						</div>
 						<div className="apiType-content block-content">
-							<div id="js_index_table"></div>
-							<div id="js_page"></div>
+							<ProductTable />
 						</div>
-						
 					</div>
 					<div className="fr news">
 						<div id="js_submitAudit" className="index-info mine block-box">
