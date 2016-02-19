@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import App from './containers/App';
 import Login from './containers/Login';
-import Index from './containers/Index';
+import App from './containers/App';
+import Main from './containers/Main';
 
 export default (
 	<Route path="/">
 		<IndexRoute component={ Login } />
 		<Route path="login" component={ Login } />
 	  	<Route path="app" component={ App }>
-	  		<Route path="index" component= { Index } />
+	  		<Route path="index" component= { Main } />
 	  	</Route>
 	</Route>
 )

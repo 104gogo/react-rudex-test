@@ -9,24 +9,20 @@ export function login() {
     return (dispatch, getState) => {
     	const { username, password } = getState().login.toJS();
 
-		return fetch(`http://192.168.1.51:18671/login/${ username }/post`, {
-		  	method: 'post',
-		  	headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		  	body: `password=${ password }&x-dms-request-id=${ new Date().getTime() }`
-		})
-		.then(res => res.json())
-		.then(json => {	
-			const { uuid, sid, userName, roleCode } = json.content;
+		return login.loginPost(username, { password: password })
+			.then(res => res.json())
+			.then(json => {	
+				const { uuid, sid, userName, roleCode } = json.content;
 
-			setCookie('dmsUserEmail', username);
-			setCookie('dmsPassWord', password);	
-			setCookie('dmsUuid', uuid);
-			setCookie('dmsSid', sid);
-			setCookie('dmsUserName', userName);
-			setCookie('dmsRoleCode', roleCode);
+				setCookie('dmsUserEmail', username);
+				setCookie('dmsPassWord', password);	
+				setCookie('dmsUuid', uuid);
+				setCookie('dmsSid', sid);
+				setCookie('dmsUserName', userName);
+				setCookie('dmsRoleCode', roleCode);
 
-			location.hash = '#app/index';
-		});
+				location.hash = '#app/index';
+			});
 	};
 }
 

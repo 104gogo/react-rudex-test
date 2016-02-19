@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ProductTable } from '../components/common/Table';
-import * as IndexActions from '../actions/index';
+import * as MainActions from '../actions/main';
 
-class Index extends Component {
+class Main extends Component {
     render() {
        
         return (
@@ -50,8 +50,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(IndexActions, dispatch)
+        actions: bindActionCreators(MainActions, dispatch)
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

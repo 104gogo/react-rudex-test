@@ -1,10 +1,12 @@
-import { login } from '../lib/fetch';
+import { index } from '../lib/fetch';
 
-export function login() {
+export const GET_PRODUCTS = 'GET_PRODUCTS';
+
+export function getProducts() {
     return (dispatch, getState) => {
     	const { username, password } = getState().login.toJS();
 
-		return login.loginPost(username, { password: password })
+		return index.productsGet({ password: password })
 			.then(res => res.json())
 			.then(json => {	
 				const { uuid, sid, userName, roleCode } = json.content;

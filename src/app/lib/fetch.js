@@ -11,7 +11,7 @@ export function Fetch(uri, param) {
 	return fetch(`http://${ server }/${ uri }`, {
 	  	method: 'post',
 	  	headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	  	body: body
+	  	body
 	});
 }
 
@@ -20,3 +20,9 @@ export const login = {
 		return Fetch(`login/${ userName }/post`, param);
 	}
 };
+
+export const index = {
+	productsGet: function(param) {  
+		return Fetch(`/product-page/get`, assign({}, param, { ps: 10 }));
+	}
+}
