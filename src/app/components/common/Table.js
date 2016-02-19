@@ -41,6 +41,6 @@ export class ProductTable extends Component {
 			}
 		];
 
-		return <Table dataSource={dataSource} columns={columns} />
+		return <Table dataSource={ dataSource } columns={ columns } />
 	}
 }

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ProductTable } from '../components/common/Table';
+import * as IndexActions from '../actions/index';
 
 class Index extends Component {
     render() {
@@ -38,4 +39,19 @@ class Index extends Component {
     }
 }  
 
-export default Index;
+function mapStateToProps(state) {
+    const { header, menu } = state.app.toJS();
+
+    return {
+        header,
+        menu
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(IndexActions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
