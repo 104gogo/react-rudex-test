@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import Fetch from '../lib/fetch';
 import { setCookie, getCookieValue } from '../lib/cookie';
 
 export const LOGIN = 'LOGIN';
@@ -9,7 +9,7 @@ export function login() {
     return (dispatch, getState) => {
     	const { username, password } = getState().login.toJS();
 
-		return login.loginPost(username, { password: password })
+		return Fetch.loginPost(username, { password: password })
 			.then(res => res.json())
 			.then(json => {	
 				const { uuid, sid, userName, roleCode } = json.content;

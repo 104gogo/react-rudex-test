@@ -6,5 +6,5 @@ export function obj2url(o) {
 		return arr;
 	};
 
-	return R.compose(R.join('&'), R.reduce(change, []))(o);
+	return R.compose(R.join('&'), R.reduce(change, []), R.keys)(o);
 }

@@ -6,6 +6,7 @@ import * as MainActions from '../actions/main';
 
 class Main extends Component {
     render() {
+    	const { datas, actions } = this.props;
        
         return (
         	<div id="container">
@@ -22,7 +23,7 @@ class Main extends Component {
 							<a href="javascript:;" className="js_toAddApi smallAddBtn fr">添加API</a>
 						</div>
 						<div className="apiType-content block-content">
-							<ProductTable />
+							<ProductTable datas={ datas } getProducts={ actions.getProducts } />
 						</div>
 					</div>
 					<div className="fr news">
@@ -40,11 +41,13 @@ class Main extends Component {
 }  
 
 function mapStateToProps(state) {
-    const { header, menu } = state.app.toJS();
+    const { datas, pn, keyword, charged } = state.main.toJS();
 
     return {
-        header,
-        menu
+        datas,
+        pn,
+        keyword,
+        charged
     }
 }
 

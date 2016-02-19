@@ -3,7 +3,12 @@ import { Table } from 'antd';
 import '../../../../public/css/antd.css';
 
 export class ProductTable extends Component {
+	componentWillMount() {
+		this.props.getProducts();
+	}
+
 	render() { 
+		console.log(this.props)
 		const dataSource = [{
 		  key: '1',
 		  productName: '胡彦斌',
