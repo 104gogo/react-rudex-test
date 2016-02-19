@@ -8,12 +8,12 @@ import Menu from '../components/index/Menu';
 
 class App extends Component {
     render() {
-        const { header, menu, actions } = this.props;
+        const { header, menu, actions, location } = this.props;
 
         return (
             <div>
                 <Header header={ header } action={ actions.clickUserName } />
-                <Menu />
+                <Menu location={ location } />
                 { this.props.children }
             </div>
         )
