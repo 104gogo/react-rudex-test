@@ -12,8 +12,8 @@ export default function(state = initialState, action) {
 	switch(action.type) {
 		case GET_PRODUCTS: 
 			const { datas } = action.content;
-			return state;
-			//return state.set('datas', fromJS(datas));
+
+			return state.set('datas', fromJS(datas));
 	}
 
 	return state;

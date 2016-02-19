@@ -8,21 +8,9 @@ export class ProductTable extends Component {
 	}
 
 	render() { 
-		console.log(this.props)
-		const dataSource = [{
-		  key: '1',
-		  productName: '胡彦斌',
-		  code: 32,
-		  versionCount: '西湖区湖底公园1号',
-		  updateTime: '2016-02-19 10:14'
-		}, {
-		  key: '2',
-		  productName: '胡彦祖',
-		  code: 42,
-		  versionCount: '西湖区湖底公园1号',
-		  updateTime: '2016-02-19 10:14'
-		}];
-
+		const { datas } = this.props;
+		
+		const dataSource = datas;
 		const columns = [
 			{
 			  	title: '产品名称',

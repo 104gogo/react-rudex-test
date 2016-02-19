@@ -7,7 +7,7 @@ import * as MainActions from '../actions/main';
 class Main extends Component {
     render() {
     	const { datas, actions } = this.props;
-       
+
         return (
         	<div id="container">
 				<div className="content index mbSix">
