@@ -29,7 +29,13 @@ class Main extends Component {
 					</div>
 					<div className="fr news">
 						<div className="index-info mine block-box">
-							<div className="btn">1</div>
+							<div className="main-box">
+								<div className="btn btn-warning">1</div>
+								<div className="btn btn-default">1</div>
+								<div className="btn btn-success">1</div>
+								<div className="btn btn-info">1</div>
+								<div className="btn btn-danger">1</div>
+							</div>
 						</div>
 						<div className="index-info latest block-box">
 					
