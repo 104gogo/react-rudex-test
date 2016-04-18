@@ -34,7 +34,7 @@ class Main extends Component {
 								<div className="btn btn-default">1</div>
 								<div className="btn btn-success">1</div>
 								<div className="btn btn-info">1</div>
-								<div className="btn btn-danger">1</div>
+								<div className="btn btn-danger btn-lg">1</div>
 							</div>
 						</div>
 						<div className="index-info latest block-box">

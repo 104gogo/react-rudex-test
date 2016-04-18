@@ -169,6 +169,18 @@ $btn-link-disabled-color:        $gray-light !default;
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$border-radius-large:       6px !default;
+$btn-border-radius-large:        $border-radius-large !default;
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+
 .main-box {
 	margin: 20px;
 	.btn + .btn {
