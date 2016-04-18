@@ -2,7 +2,7 @@ import {　Map　} from 'immutable';
 import { LOGIN, CHANGE_USERNAME, CHANGE_PASSWORD } from '../actions/login';
 
 const initialState = Map({
-    username: 'linghong@56qq.com',
+    username: 'xiaotian.zhang@56qq.com',
     password: '123456'
 });
 

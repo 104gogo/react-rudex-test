@@ -15,11 +15,11 @@ class Header extends Component {
 					<p className="fr">运力科技研发管理系统</p>
 				</h1>
 				<div className="fr user">
-					<span className="userName js_userName" onClick={ this.clickUserName.bind(this, isClick) }>{ username }</span>
+					<span className="userName js_userName" onMouseEnter={ this.clickUserName.bind(this, isClick) }>{ username }</span>
 				</div>
-				{ isClick? <div className="fr user js_userName_box" >
+				{ isClick? <div className="fr user js_userName_box" onMouseLeave={ this.clickUserName.bind(this, isClick) }>
 					<ul className="nameBox js_nameBox_list">
-						<li onClick={ this.clickUserName.bind(this, isClick) }><span className="userName js_userName">{ username }</span></li>
+						<li><span className="userName js_userName">{ username }</span></li>
 						<li className="js_update_password">修改密码</li>
 						<li className="js_update_user">修改资料</li> 
 						<li className="js_logout">退&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出</li> 

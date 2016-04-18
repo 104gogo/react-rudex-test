@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'antd';
+import Table from 'antd/lib/table';
 import '../../../../public/css/antd.css';
 
 export class ProductTable extends Component {

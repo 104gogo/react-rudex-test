@@ -12,6 +12,10 @@ export default {
 		      	test: /\.css?$/,
 		      	loaders: [ 'style', 'raw' ],
 		      	include: path.join(__dirname, '..',  'public')
+		    },
+		    { 
+		    	test: /\.scss$/, 
+		    	loaders: [ 'style', 'css', 'autoprefixer', 'sass' ] 
 		    }
 		    // {
 		    //   	test: /.*\.(png|gif|svg|jpe?g)$/,
