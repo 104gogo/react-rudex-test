@@ -8084,3 +8084,8 @@ textarea {
 
 .regular-radio {
   display: none; }
+
+
+.rc-tooltip-hidden {
+  display: none;
+}

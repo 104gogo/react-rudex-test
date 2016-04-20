@@ -8,6 +8,7 @@ import routes from '../app/routes';
 
 //引入样式
 import '../../public/css/index.css';
+// import 'rc-tooltip/assets/bootstrap.css';
 
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);

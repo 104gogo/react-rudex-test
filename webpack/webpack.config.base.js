@@ -9,9 +9,8 @@ export default {
 		      	exclude: /node_modules/
 		    },
 		    {
-		      	test: /\.css?$/,
-		      	loaders: [ 'style', 'raw' ],
-		      	include: path.join(__dirname, '..',  'public')
+		      	test: /\.css$/,
+		      	loaders: [ 'style', 'raw' ]
 		    },
 		    { 
 		    	test: /\.scss$/, 
